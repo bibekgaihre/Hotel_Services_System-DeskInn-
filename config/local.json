@@ -1,0 +1,18 @@
+{
+  "app": {
+    "name": "DeskInn",
+    "port": 3000,
+    "secret": "rwp*luNrhZ2ipJNUzLLwztQSF1GC)Ugp",
+    "url": ""
+  },
+  "jwt": {
+    "duration": 3600000,
+    "duration_long": 604800000
+  },
+  "db_url": "mongodb://localhost:27017/DeskInnDB",
+  "bot": {
+    "alexa": {
+      "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d"
+    }
+  }
+}
