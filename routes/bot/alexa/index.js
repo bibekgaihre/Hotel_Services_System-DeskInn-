@@ -20,7 +20,8 @@ const {
   BellboyHandler,
   TransportHandler
 } = require("../../../modules/bot/concierge/concierge.handler");
-
+//importing food handler files
+const { FoodOrderHandler } = require("../../../modules/bot/food/food.handlers");
 router.get("/", (req, res, next) => {
   res.sendStatus(200);
 });
@@ -38,6 +39,7 @@ router.post("/", (req, res, next) => {
         ToiletriesHandler,
         BellboyHandler,
         TransportHandler,
+        FoodOrderHandler,
         HelpHandler,
         SessionEndedRequestHandler,
         UnhandledIntent

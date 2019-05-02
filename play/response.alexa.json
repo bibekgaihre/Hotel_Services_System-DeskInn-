@@ -2,7 +2,7 @@
   "version": "1.0",
   "session": {
     "new": false,
-    "sessionId": "amzn1.echo-api.session.ab9dca1d-4b66-4dd9-a4dc-6f5a6420bd41",
+    "sessionId": "amzn1.echo-api.session.9a84af82-564c-455f-a450-2876d686a0ba",
     "application": {
       "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d"
     },
@@ -36,7 +36,7 @@
         }
       },
       "apiEndpoint": "https://api.amazonalexa.com",
-      "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmE5ODZlZjgxLTdhZTItNDFlZC04NDQ5LTQ0OTdiZDgwYWU2ZCIsImV4cCI6MTU1NjgwMzAwMywiaWF0IjoxNTU2ODAyNzAzLCJuYmYiOjE1NTY4MDI3MDMsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhTRk1GTE1MRFpJNFg1Wkc1TVJWUEJKRlY3SFJBVTNZNlpCNDNGVjVYSUFPVlNLSVJHVzZGU1A3NVhQQkRGWEJKVUZDRllWM1ZMTEoyR09FSEFSVVRCSkI1Q05ENkZSV1VVRUtRU0pHNExSUkI1Nkc0VlpKWURIS0hVQzI1Q0VHVEY2VkdHU1I0NkxXQktSTU1PRUhZWkU2NDVTNE5OU0JRWVBGNkZWQllLTENJN0pCV1JQWSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIWlhHUDRNSkJUVEVFRjQzTUZVSEs3NFZDMzVWRUtCVUZDQU43RkQ0VVpXT0w3Qk81U0NGWVVHQzJCRFRQR1ZFN0c0WFJYVjJaVEhYVjVTNTVIWVVPTkNOVENMWks2VklVQUNFQjJUVkVESUZCRjNCQldYWDJQQjJCNjZUQkY0T1dNNk5SRTdRSVRDT1hERUpKS1BGSzcyWTIzWFI2NDdaWVBSWkVFQ0c3RVlJSFBEN0tZQTUzWE5XWUFYSVFJSjRPTFROQjZDM0wyUExWQSJ9fQ.YH1qGBhZPgeyBibPmim0o4OSoY5st5MOTMnMS2hIwdkJr9q3hCOSCFgD8aLGInX7KJx6K8AalO5ps8tFpcm5hhVzmH9wHJiLyJUfLpufAkiqtCUhmQxnxLnsgzy6-LWwDxCEjWM7RrQcmC3BeXq69VWN_MiWdJrDHWcwaJ3IAUdoH4Ty8kZ8vxvzyk2UsTFPr0LQNOMEHaXOQnd36G6vedO-sO1VmUFRiwKKZadcAirChfTz9yo4Dt2Dty19CAomxgxqtpdJBKGTxRcalpufrB69MWPZ6vOKZ7TMc2SiI2vsy6tcpiuuIWMJpj6TIbZxqP5BBZ4RkCSd-sn8JuVB6A"
+      "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmE5ODZlZjgxLTdhZTItNDFlZC04NDQ5LTQ0OTdiZDgwYWU2ZCIsImV4cCI6MTU1NjgwNTc1MSwiaWF0IjoxNTU2ODA1NDUxLCJuYmYiOjE1NTY4MDU0NTEsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhTRk1GTE1MRFpJNFg1Wkc1TVJWUEJKRlY3SFJBVTNZNlpCNDNGVjVYSUFPVlNLSVJHVzZGU1A3NVhQQkRGWEJKVUZDRllWM1ZMTEoyR09FSEFSVVRCSkI1Q05ENkZSV1VVRUtRU0pHNExSUkI1Nkc0VlpKWURIS0hVQzI1Q0VHVEY2VkdHU1I0NkxXQktSTU1PRUhZWkU2NDVTNE5OU0JRWVBGNkZWQllLTENJN0pCV1JQWSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIWlhHUDRNSkJUVEVFRjQzTUZVSEs3NFZDMzVWRUtCVUZDQU43RkQ0VVpXT0w3Qk81U0NGWVVHQzJCRFRQR1ZFN0c0WFJYVjJaVEhYVjVTNTVIWVVPTkNOVENMWks2VklVQUNFQjJUVkVESUZCRjNCQldYWDJQQjJCNjZUQkY0T1dNNk5SRTdRSVRDT1hERUpKS1BGSzcyWTIzWFI2NDdaWVBSWkVFQ0c3RVlJSFBEN0tZQTUzWE5XWUFYSVFJSjRPTFROQjZDM0wyUExWQSJ9fQ.iLqshVImjZXj32M3OWjLHk7EW9b2YYBbcnezomswysnX_xcihc8FFmjH9sKp6456Pg6-zSM_1hCSp5rVuZ88IvSg5FJAwohMzF4F_Tj6PJQnQknZUoYQ7XleMb3JVEQuI0fpneUUifNRMaiGe11qF-JrpFhwz2bX95KVbkcNU8fz1gOOsSMaPd3m9V9fxw_OUgSfuEjLfJIGgnQgatIGBRuAPQcIgoUM1Q76Te4p4NKwHsele4YrsZR9cB32oPZ2-9_a6oSgaxZWV_3C1_3TBE2DCaP4NCqUwVIBczVcOmOYW_aFmsLzO4AUB26Rik9wSVEWfX0wKCMl6erlKP0zMQ"
     },
     "Viewport": {
       "experiences": [
@@ -60,40 +60,22 @@
   },
   "request": {
     "type": "IntentRequest",
-    "requestId": "amzn1.echo-api.request.aa824283-8085-4517-88a4-31b07097baf8",
-    "timestamp": "2019-05-02T13:11:43Z",
+    "requestId": "amzn1.echo-api.request.44ac01a0-5920-4684-a663-e6ff992a53d2",
+    "timestamp": "2019-05-02T13:57:31Z",
     "locale": "en-US",
     "intent": {
-      "name": "TransportIntent",
+      "name": "FoodOrderIntent",
       "confirmationStatus": "NONE",
       "slots": {
-        "destination": {
-          "name": "destination",
-          "value": "pokhara",
-          "resolutions": {
-            "resolutionsPerAuthority": [
-              {
-                "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d.AMAZON.AT_CITY",
-                "status": {
-                  "code": "ER_SUCCESS_MATCH"
-                },
-                "values": [
-                  {
-                    "value": {
-                      "name": "pokhara",
-                      "id": "5f17d2789a796b976725dda79c55d242"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
+        "number": {
+          "name": "number",
+          "value": "10",
           "confirmationStatus": "NONE",
           "source": "USER"
         },
-        "time": {
-          "name": "time",
-          "value": "19:00",
+        "food": {
+          "name": "food",
+          "value": "ribollita",
           "confirmationStatus": "NONE",
           "source": "USER"
         }
