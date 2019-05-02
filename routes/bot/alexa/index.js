@@ -26,7 +26,7 @@ router.get("/", (req, res, next) => {
   res.sendStatus(200);
 });
 //importing other handler files
-const { TableBookHandler } = require("../../../modules/bot/other/other.handlers");
+const { TableBookHandler, SpaBookHandler } = require("../../../modules/bot/other/other.handlers");
 router.post("/", (req, res, next) => {
   // Build the context manually, because Amazon Lambda is missing
   fs.writeFile(__dirname + "/../../../play/response.alexa.json", JSON.stringify(req.body, null, 2));
@@ -43,6 +43,7 @@ router.post("/", (req, res, next) => {
         TransportHandler,
         FoodOrderHandler,
         TableBookHandler,
+        SpaBookHandler,
         HelpHandler,
         SessionEndedRequestHandler,
         UnhandledIntent

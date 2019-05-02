@@ -31,7 +31,7 @@ const CleaningHandler = {
 
       let payload = { requested_time, room_no, request_type: "cleaning", source: "Alexa" };
       await RequestController.create(payload);
-      speechText = `Your cleaning request has been logged. Someone will be there shortly`;
+      speechText = `Your cleaning request has been logged. Someone will be there shortly. Thank You`;
     } catch (e) {
       speechText = `Some error occured, please try again.`;
     }

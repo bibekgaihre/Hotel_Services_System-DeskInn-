@@ -48,7 +48,7 @@ const HelpHandler = {
     );
   },
   handle(handlerInput) {
-    const speechText = `Hello. I am Alexa from frontdesk. I was built to provide you quality services. I am connected with hotel staffs. You can ask me to clean room, bring something for Washroom, Order something to eat, book a spa, call bellboy, ask for taxi, book table on our restaurants. Thank You`;
+    const speechText = `Hello. I am Alexa from frontdesk. I was built to provide you quality services. I am connected with hotel staffs. You can ask me to clean room, bring something for Washroom, Order something to eat, book a spa, call bellboy, ask for taxi and book table on our restaurants. Thank You`;
     return handlerInput.responseBuilder
       .speak(speechText)
       .withSimpleCard(

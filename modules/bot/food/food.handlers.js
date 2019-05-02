@@ -33,7 +33,7 @@ const FoodOrderHandler = {
         details: { food, food_quantity }
       };
       await RequestController.create(payload);
-      speechText = `Your Food request has been logged. Your food will arrive shortly. If you want any other of menu. You can request now`;
+      speechText = `Your Food request has been logged. Your food will arrive shortly. If you want any other of menu. You can request now. Thank You`;
     } catch (e) {
       speechText = `Some error occured, please try again.`;
     }

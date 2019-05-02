@@ -31,7 +31,7 @@ const BellboyHandler = {
 
       let payload = { requested_time, room_no, request_type: "baggage", source: "Alexa" };
       await RequestController.create(payload);
-      speechText = `Your luggage request has been logged. Bellboy will be arriving on time to pickup your luggage`;
+      speechText = `Your luggage request has been logged. Bellboy will be arriving on time to pickup your luggage. Thank you`;
     } catch (e) {
       speechText = `Some error occured, please try again.`;
     }
@@ -78,7 +78,7 @@ const TransportHandler = {
       };
       console.log(payload);
       await RequestController.create(payload);
-      speechText = `Your transport request has been logged. You will be shortly notified after Taxi Arrives`;
+      speechText = `Your transport request has been logged. You will be shortly notified after Taxi Arrives.Thank You`;
     } catch (e) {
       speechText = `Some error occured, please try again.`;
     }
