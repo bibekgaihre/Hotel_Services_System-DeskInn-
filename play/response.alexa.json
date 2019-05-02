@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "session": {
-    "new": false,
-    "sessionId": "amzn1.echo-api.session.9edbfa91-25a7-4208-a146-ee9d5acbff79",
+    "new": true,
+    "sessionId": "amzn1.echo-api.session.4872494b-d3a5-4dac-964f-930526f79280",
     "application": {
       "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d"
     },
@@ -11,9 +11,7 @@
     }
   },
   "context": {
-    "Display": {
-      "token": ""
-    },
+    "Display": {},
     "System": {
       "application": {
         "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d"
@@ -32,13 +30,11 @@
             "runtime": {
               "maxVersion": "1.0"
             }
-          },
-          "Alexa.Camera.PhotoCaptureController": {},
-          "Alexa.Camera.VideoCaptureController": {}
+          }
         }
       },
       "apiEndpoint": "https://api.amazonalexa.com",
-      "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmE5ODZlZjgxLTdhZTItNDFlZC04NDQ5LTQ0OTdiZDgwYWU2ZCIsImV4cCI6MTU1Njc5MDIwMSwiaWF0IjoxNTU2Nzg5OTAxLCJuYmYiOjE1NTY3ODk5MDEsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhTRk1GTE1MRFpJNFg1Wkc1TVJWUEJKRlY3SFJBVTNZNlpCNDNGVjVYSUFPVlNLSVJHVzZGU1A3NVhQQkRGWEJKVUZDRllWM1ZMTEoyR09FSEFSVVRCSkI1Q05ENkZSV1VVRUtRU0pHNExSUkI1Nkc0VlpKWURIS0hVQzI1Q0VHVEY2VkdHU1I0NkxXQktSTU1PRUhZWkU2NDVTNE5OU0JRWVBGNkZWQllLTENJN0pCV1JQWSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIWlhHUDRNSkJUVEVFRjQzTUZVSEs3NFZDMzVWRUtCVUZDQU43RkQ0VVpXT0w3Qk81U0NGWVVHQzJCRFRQR1ZFN0c0WFJYVjJaVEhYVjVTNTVIWVVPTkNOVENMWks2VklVQUNFQjJUVkVESUZCRjNCQldYWDJQQjJCNjZUQkY0T1dNNk5SRTdRSVRDT1hERUpKS1BGSzcyWTIzWFI2NDdaWVBSWkVFQ0c3RVlJSFBEN0tZQTUzWE5XWUFYSVFJSjRPTFROQjZDM0wyUExWQSJ9fQ.h0DXunDeBH5jkB5Wza_BUr42Ndtg9k00TF3H4JWv1JgaYSWDxJ_WR4H9cq89zNJF9zp70X-Y5BAzs4Q4MQQ2H86h4r6QEAJ6ZARcauG5VJeuMQg8Wpdwzbd63YJPNZkXOiui4K38InseiYJTR5FjuAnXgZzwguRvPcL3IWd6ENx-NOswWfc7ltW6J-NNevO20P-9wvIz6aokj9XSQyTFFHAPXbRJ9Z-BASmegiaTFunrzfm6tle2iN2G1axupXT3o8lLX2xpfa2yv5Y1SUntEGTAPI7QZunAQgA4xxOhdaDff4nldLNBy2mePkGTCevmyld7KS53a2wuOpN3l3oo1Q"
+      "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmE5ODZlZjgxLTdhZTItNDFlZC04NDQ5LTQ0OTdiZDgwYWU2ZCIsImV4cCI6MTU1Njc5NjkzNywiaWF0IjoxNTU2Nzk2NjM3LCJuYmYiOjE1NTY3OTY2MzcsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhTRk1GTE1MRFpJNFg1Wkc1TVJWUEJKRlY3SFJBVTNZNlpCNDNGVjVYSUFPVlNLSVJHVzZGU1A3NVhQQkRGWEJKVUZDRllWM1ZMTEoyR09FSEFSVVRCSkI1Q05ENkZSV1VVRUtRU0pHNExSUkI1Nkc0VlpKWURIS0hVQzI1Q0VHVEY2VkdHU1I0NkxXQktSTU1PRUhZWkU2NDVTNE5OU0JRWVBGNkZWQllLTENJN0pCV1JQWSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIWlhHUDRNSkJUVEVFRjQzTUZVSEs3NFZDMzVWRUtCVUZDQU43RkQ0VVpXT0w3Qk81U0NGWVVHQzJCRFRQR1ZFN0c0WFJYVjJaVEhYVjVTNTVIWVVPTkNOVENMWks2VklVQUNFQjJUVkVESUZCRjNCQldYWDJQQjJCNjZUQkY0T1dNNk5SRTdRSVRDT1hERUpKS1BGSzcyWTIzWFI2NDdaWVBSWkVFQ0c3RVlJSFBEN0tZQTUzWE5XWUFYSVFJSjRPTFROQjZDM0wyUExWQSJ9fQ.dcc0CJ-fyWsMvDJkqCm717y8K2srwBfKfvfNL9y1-OiTuNHCV5XMKQuMrmUVHq14XGC0Pg52yeZnecIBECj8O7yj2Gz4gUd_nJgZFYWTCeuv77sSwUifNFHpPq_wFhnqdmVE5H--buOiU9fCITS1OJrTpUK5UT_r8ZiADh48JcZ0B3z2elcLpv1Wtfkn1_HrbDfP6-f5kkgn4ujW0v139M-VOdgO2QQDsV1Y6xckhlAu8im92WoP4VasPCAotqalHr8ZBJyosxf48h6FY5IC4BAM60McaSogorsRC7Z4f9f9LxPixviwlzsJhV1LT2Kx2m0TrifVWp3u7UVtrkA0RA"
     },
     "Viewport": {
       "experiences": [
@@ -62,8 +58,8 @@
   },
   "request": {
     "type": "IntentRequest",
-    "requestId": "amzn1.echo-api.request.b7658f7e-0334-49b0-bb38-455bd5a94c78",
-    "timestamp": "2019-05-02T09:38:21Z",
+    "requestId": "amzn1.echo-api.request.e51bce6f-e718-4c3e-8cfe-6e46349fd01d",
+    "timestamp": "2019-05-02T11:30:37Z",
     "locale": "en-US",
     "intent": {
       "name": "CleaningIntent",
@@ -71,7 +67,7 @@
       "slots": {
         "time": {
           "name": "time",
-          "value": "10:00",
+          "value": "19:30",
           "confirmationStatus": "NONE",
           "source": "USER"
         }
