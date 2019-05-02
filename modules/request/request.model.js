@@ -16,7 +16,16 @@ const RequestSchema = mongoose.Schema(
     },
     request_type: {
       type: String,
-      enum: ["general", "food", "cleaning", "toiletries", "transport", "baggage"],
+      enum: [
+        "general",
+        "food",
+        "cleaning",
+        "toiletries",
+        "transport",
+        "baggage",
+        "spabook",
+        "tablebook"
+      ],
       required: true
     },
     assigned_to: {

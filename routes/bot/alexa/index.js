@@ -1,18 +1,25 @@
 const fs = require("fs");
-const config = require("config");
+
 const router = require("express").Router();
 const Alexa = require("ask-sdk");
 let skill;
-
+//importing general handler files
 const {
   LaunchRequestHandler,
   SessionEndedRequestHandler,
+  HelpHandler,
   UnhandledIntent
 } = require("../../../modules/bot/general/general.handlers");
+//importing housekeeping handler files
 const {
   CleaningHandler,
   ToiletriesHandler
 } = require("../../../modules/bot/housekeeping/housekeeping.handlers");
+//importing concierge handler files
+const {
+  BellboyHandler,
+  TransportHandler
+} = require("../../../modules/bot/concierge/concierge.handler");
 
 router.get("/", (req, res, next) => {
   res.sendStatus(200);
@@ -29,6 +36,9 @@ router.post("/", (req, res, next) => {
         LaunchRequestHandler,
         CleaningHandler,
         ToiletriesHandler,
+        BellboyHandler,
+        TransportHandler,
+        HelpHandler,
         SessionEndedRequestHandler,
         UnhandledIntent
       )

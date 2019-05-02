@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "session": {
-    "new": true,
-    "sessionId": "amzn1.echo-api.session.4872494b-d3a5-4dac-964f-930526f79280",
+    "new": false,
+    "sessionId": "amzn1.echo-api.session.ab9dca1d-4b66-4dd9-a4dc-6f5a6420bd41",
     "application": {
       "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d"
     },
@@ -11,7 +11,9 @@
     }
   },
   "context": {
-    "Display": {},
+    "Display": {
+      "token": ""
+    },
     "System": {
       "application": {
         "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d"
@@ -34,7 +36,7 @@
         }
       },
       "apiEndpoint": "https://api.amazonalexa.com",
-      "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmE5ODZlZjgxLTdhZTItNDFlZC04NDQ5LTQ0OTdiZDgwYWU2ZCIsImV4cCI6MTU1Njc5NjkzNywiaWF0IjoxNTU2Nzk2NjM3LCJuYmYiOjE1NTY3OTY2MzcsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhTRk1GTE1MRFpJNFg1Wkc1TVJWUEJKRlY3SFJBVTNZNlpCNDNGVjVYSUFPVlNLSVJHVzZGU1A3NVhQQkRGWEJKVUZDRllWM1ZMTEoyR09FSEFSVVRCSkI1Q05ENkZSV1VVRUtRU0pHNExSUkI1Nkc0VlpKWURIS0hVQzI1Q0VHVEY2VkdHU1I0NkxXQktSTU1PRUhZWkU2NDVTNE5OU0JRWVBGNkZWQllLTENJN0pCV1JQWSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIWlhHUDRNSkJUVEVFRjQzTUZVSEs3NFZDMzVWRUtCVUZDQU43RkQ0VVpXT0w3Qk81U0NGWVVHQzJCRFRQR1ZFN0c0WFJYVjJaVEhYVjVTNTVIWVVPTkNOVENMWks2VklVQUNFQjJUVkVESUZCRjNCQldYWDJQQjJCNjZUQkY0T1dNNk5SRTdRSVRDT1hERUpKS1BGSzcyWTIzWFI2NDdaWVBSWkVFQ0c3RVlJSFBEN0tZQTUzWE5XWUFYSVFJSjRPTFROQjZDM0wyUExWQSJ9fQ.dcc0CJ-fyWsMvDJkqCm717y8K2srwBfKfvfNL9y1-OiTuNHCV5XMKQuMrmUVHq14XGC0Pg52yeZnecIBECj8O7yj2Gz4gUd_nJgZFYWTCeuv77sSwUifNFHpPq_wFhnqdmVE5H--buOiU9fCITS1OJrTpUK5UT_r8ZiADh48JcZ0B3z2elcLpv1Wtfkn1_HrbDfP6-f5kkgn4ujW0v139M-VOdgO2QQDsV1Y6xckhlAu8im92WoP4VasPCAotqalHr8ZBJyosxf48h6FY5IC4BAM60McaSogorsRC7Z4f9f9LxPixviwlzsJhV1LT2Kx2m0TrifVWp3u7UVtrkA0RA"
+      "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmE5ODZlZjgxLTdhZTItNDFlZC04NDQ5LTQ0OTdiZDgwYWU2ZCIsImV4cCI6MTU1NjgwMzAwMywiaWF0IjoxNTU2ODAyNzAzLCJuYmYiOjE1NTY4MDI3MDMsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhTRk1GTE1MRFpJNFg1Wkc1TVJWUEJKRlY3SFJBVTNZNlpCNDNGVjVYSUFPVlNLSVJHVzZGU1A3NVhQQkRGWEJKVUZDRllWM1ZMTEoyR09FSEFSVVRCSkI1Q05ENkZSV1VVRUtRU0pHNExSUkI1Nkc0VlpKWURIS0hVQzI1Q0VHVEY2VkdHU1I0NkxXQktSTU1PRUhZWkU2NDVTNE5OU0JRWVBGNkZWQllLTENJN0pCV1JQWSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIWlhHUDRNSkJUVEVFRjQzTUZVSEs3NFZDMzVWRUtCVUZDQU43RkQ0VVpXT0w3Qk81U0NGWVVHQzJCRFRQR1ZFN0c0WFJYVjJaVEhYVjVTNTVIWVVPTkNOVENMWks2VklVQUNFQjJUVkVESUZCRjNCQldYWDJQQjJCNjZUQkY0T1dNNk5SRTdRSVRDT1hERUpKS1BGSzcyWTIzWFI2NDdaWVBSWkVFQ0c3RVlJSFBEN0tZQTUzWE5XWUFYSVFJSjRPTFROQjZDM0wyUExWQSJ9fQ.YH1qGBhZPgeyBibPmim0o4OSoY5st5MOTMnMS2hIwdkJr9q3hCOSCFgD8aLGInX7KJx6K8AalO5ps8tFpcm5hhVzmH9wHJiLyJUfLpufAkiqtCUhmQxnxLnsgzy6-LWwDxCEjWM7RrQcmC3BeXq69VWN_MiWdJrDHWcwaJ3IAUdoH4Ty8kZ8vxvzyk2UsTFPr0LQNOMEHaXOQnd36G6vedO-sO1VmUFRiwKKZadcAirChfTz9yo4Dt2Dty19CAomxgxqtpdJBKGTxRcalpufrB69MWPZ6vOKZ7TMc2SiI2vsy6tcpiuuIWMJpj6TIbZxqP5BBZ4RkCSd-sn8JuVB6A"
     },
     "Viewport": {
       "experiences": [
@@ -58,16 +60,40 @@
   },
   "request": {
     "type": "IntentRequest",
-    "requestId": "amzn1.echo-api.request.e51bce6f-e718-4c3e-8cfe-6e46349fd01d",
-    "timestamp": "2019-05-02T11:30:37Z",
+    "requestId": "amzn1.echo-api.request.aa824283-8085-4517-88a4-31b07097baf8",
+    "timestamp": "2019-05-02T13:11:43Z",
     "locale": "en-US",
     "intent": {
-      "name": "CleaningIntent",
+      "name": "TransportIntent",
       "confirmationStatus": "NONE",
       "slots": {
+        "destination": {
+          "name": "destination",
+          "value": "pokhara",
+          "resolutions": {
+            "resolutionsPerAuthority": [
+              {
+                "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d.AMAZON.AT_CITY",
+                "status": {
+                  "code": "ER_SUCCESS_MATCH"
+                },
+                "values": [
+                  {
+                    "value": {
+                      "name": "pokhara",
+                      "id": "5f17d2789a796b976725dda79c55d242"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "confirmationStatus": "NONE",
+          "source": "USER"
+        },
         "time": {
           "name": "time",
-          "value": "19:30",
+          "value": "19:00",
           "confirmationStatus": "NONE",
           "source": "USER"
         }
