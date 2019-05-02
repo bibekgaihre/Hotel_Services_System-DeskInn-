@@ -1,16 +1,43 @@
-const LaunchHandler = {
+const LaunchRequestHandler = {
   canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.type === "LaunchRequest";
+    return handlerInput.requestEnvelope.request.type === "LaunchRequest";
   },
   handle(handlerInput) {
-    const speechText = "Hello Hello Is anybody in there!";
+    const speechText = "Hello, I am your Assistant. You can now request services as you want.";
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .reprompt("IS there anybody")
-      .withSimpleCard("Hello World", speechText)
+      .reprompt(speechText)
+      .withSimpleCard(
+        "Hello, I am your Assistant. You can now request services as you want.",
+        speechText
+      )
       .getResponse();
   }
 };
 
-module.exports = LaunchHandler;
+const UnhandledIntent = {
+  canHandle(handlerInput) {
+    return true;
+  },
+  handle(handlerInput, error) {
+    // console.log(`Error handled: ${error.message}`);
+
+    return handlerInput.responseBuilder
+      .speak("Sorry. there was an error")
+      .reprompt("Sorry. there was an error")
+      .getResponse();
+  }
+};
+
+const SessionEndedRequestHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === "SessionEndedRequest";
+  },
+  handle(handlerInput) {
+    //any cleanup logic goes here
+    return handlerInput.responseBuilder.getResponse();
+  }
+};
+
+module.exports = { LaunchRequestHandler, UnhandledIntent, SessionEndedRequestHandler };

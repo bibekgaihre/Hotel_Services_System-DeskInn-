@@ -12,7 +12,8 @@
   "db_url": "mongodb://localhost:27017/DeskInnDB",
   "bot": {
     "alexa": {
-      "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d"
+      "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d",
+      "RoomNo101": "amzn1.ask.device.AHSFMFLMLDZI4X5ZG5MRVPBJFV7HRAU3Y6ZB43FV5XIAOVSKIRGW6FSP75XPBDFXBJUFCFYV3VLLJ2GOEHARUTBJB5CND6FRWUUEKQSJG4LRRB56G4VZJYDHKHUC25CEGTF6VGGSR46LWBKRMMOEHYZE645S4NNSBQYPF6FVBYKLCI7JBWRPY"
     }
   }
 }

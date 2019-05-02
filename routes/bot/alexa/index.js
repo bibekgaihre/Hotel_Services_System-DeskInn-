@@ -1,34 +1,32 @@
+const fs = require("fs");
 const config = require("config");
 const router = require("express").Router();
 
 const Alexa = require("ask-sdk");
 let skill;
 
-const HelloWorldHandler = {
-  canHandle(handlerInput) {
-    return (
-      handlerInput.requestEnvelope.request.type === "IntentRequest" &&
-      handlerInput.requestEnvelope.request.intent.name === "HelloWorldIntent"
-    );
-  },
-  handle(handlerInput) {
-    const speechText = "Hello World!";
-    console.log("hello");
-    return handlerInput.responseBuilder
-      .speak(speechText)
-      .withSimpleCard("Hello World", speechText)
-      .getResponse();
-  }
-};
+const {
+  LaunchRequestHandler,
+  SessionEndedRequestHandler,
+  UnhandledIntent
+} = require("../../../modules/bot/general/general.handlers");
+const CleaningHandler = require("../../../modules/bot/housekeeping/housekeeping.handlers");
+
 router.get("/", (req, res, next) => {
   res.sendStatus(200);
 });
 router.post("/", (req, res, next) => {
-  console.log(req.body);
   // Build the context manually, because Amazon Lambda is missing
+  fs.writeFile(__dirname + "/../../../play/response.alexa.json", JSON.stringify(req.body, null, 2));
+  // console.log(config.get("bot.alexa.applicationId"));
   if (!skill) {
     skill = Alexa.SkillBuilders.custom()
-      .addRequestHandlers(HelloWorldHandler)
+      .addRequestHandlers(
+        LaunchRequestHandler,
+        CleaningHandler,
+        SessionEndedRequestHandler,
+        UnhandledIntent
+      )
       .create();
   }
   skill
@@ -44,6 +42,7 @@ router.post("/", (req, res, next) => {
 
   // var alexa = Alexa.handler(req.body, context);
   // alexa.appId = config.get("bot.alexa.applicationId");
+
   // alexa.registerHandlers(handlers);
   // alexa.execute();
 });
