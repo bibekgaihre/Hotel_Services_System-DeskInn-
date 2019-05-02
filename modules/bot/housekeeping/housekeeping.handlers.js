@@ -1,5 +1,6 @@
 const utils = require("../utils");
 const moment = require("moment");
+const RequestController = require("../../../modules/request/request.controller");
 
 const CleaningHandler = {
   canHandle(handlerInput) {
@@ -8,7 +9,7 @@ const CleaningHandler = {
       handlerInput.requestEnvelope.request.intent.name === "CleaningIntent"
     );
   },
-  handle(handlerInput) {
+  async handle(handlerInput) {
     let deviceId = handlerInput.requestEnvelope.context.System.device.deviceId;
     let speechText;
     let room_no;
@@ -30,8 +31,8 @@ const CleaningHandler = {
         let requested_time = date + "" + timeSlot.value;
         requested_time = moment(requested_time, "MM/DD/YYYY HH:mm").format();
 
-        payload = { requested_time, room_no, request_type: "cleaning", source: "Alexa" };
-        console.log(payload);
+        let payload = { requested_time, room_no, request_type: "cleaning", source: "Alexa" };
+        await RequestController.create(payload);
         speechText = `Your cleaning request has been logged. Someone will be there shortly`;
       }
     } catch (e) {

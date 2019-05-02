@@ -10,6 +10,7 @@ var app = express();
 
 const config = require("config");
 const mongoose = require("mongoose");
+mongoose.connect(config.get("db_url"), { useNewUrlParser: true });
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
