@@ -2,6 +2,7 @@ const router = require("express").Router();
 const UserController = require("../modules/user/user.controller");
 
 router.post("/login_process", async (req, res, next) => {
+  console.log(req.body);
   try {
     let user = await UserController.login(req.body);
     let tokenData = await UserController.validateToken(user.token);
@@ -18,3 +19,5 @@ router.get("/logout", (req, res, next) => {
   res.clearCookie("user");
   res.redirect("/login");
 });
+
+module.exports = router;
