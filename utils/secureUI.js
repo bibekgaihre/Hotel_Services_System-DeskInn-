@@ -1,26 +1,18 @@
-const UserController = require("../modules/users/user.controller");
-
+const jwt = require("jsonwebtoken");
+const config = require("config");
 const SecureUI = () => {
+  console.log("hello");
   return function(req, res, next) {
-    var token =
-      req.cookies.access_token ||
-      req.query.access_token ||
-      req.body.access_token ||
-      req.headers["access_token"];
-    if (!token) {
+    try {
+      const tok = req.cookies.authorization.split(" ")[1];
+      console.log(tok);
+      const decoded = jwt.verify(tok, config.get("app.secret"));
+      req.userData = decoded;
+      next();
+    } catch (err) {
       res.redirect("/login");
       res.end();
     }
-
-    UserController.validateToken(token)
-      .then(t => {
-        req.tokenData = t.data;
-        next();
-      })
-      .catch(err => {
-        res.redirect("/login");
-        res.end();
-      });
   };
 };
 
