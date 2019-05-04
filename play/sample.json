@@ -1,0 +1,18 @@
+[
+  {
+    "email": "frontdesk@admin.com",
+    "password": "T$mp1234"
+  },
+  {
+    "_id": "5ccd9374872d7c16b8bf1aa4",
+    "requested_time": "2019-05-04T16:15:00.000Z",
+    "status": "new",
+    "note": null,
+    "room_no": "101",
+    "request_type": "cleaning",
+    "source": "Alexa",
+    "created_at": "2019-05-04T13:28:20.673Z",
+    "updated_at": "2019-05-04T13:28:20.673Z",
+    "__v": 0
+  }
+]

@@ -4,7 +4,21 @@ const { Socket } = require("../../utils/socket");
 const RequestController = require("./request.controller");
 
 router.get("/", SecureAPI(), async (req, res, next) => {
-  res.sendStatus(200);
+  let limit = parseInt(req.query.limit) || 50;
+  let start = parseInt(req.query.start) || 0;
+  let page = parseInt(start) / parseInt(limit) + 1;
+  let status = req.query.status || "inbox";
+  let data = await RequestController.read({
+    limit,
+    start,
+    page,
+    status
+  });
+  try {
+    res.json(data);
+  } catch (e) {
+    return e;
+  }
 });
 router.post("/", SecureAPI(), async (req, res, next) => {
   const data = await RequestController.create(req.body);
@@ -14,7 +28,21 @@ router.post("/", SecureAPI(), async (req, res, next) => {
     return e;
   }
 });
-router.get("/:id", SecureAPI(), async (req, res, next) => {});
-router.put("/:id", SecureAPI(), async (req, res, next) => {});
+router.get("/:id", SecureAPI(), async (req, res, next) => {
+  const data = await RequestController.readById(req.params.id);
+  try {
+    return res.json(data);
+  } catch (e) {
+    return e;
+  }
+});
+router.put("/:id", SecureAPI(), async (req, res, next) => {
+  const data = await RequestController.update(req.params.id, req.body);
+  try {
+    return res.json(data);
+  } catch (e) {
+    return e;
+  }
+});
 router.put("/:id/status", SecureAPI(), async (req, res, next) => {});
 module.exports = router;
