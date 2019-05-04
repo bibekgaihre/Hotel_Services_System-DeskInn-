@@ -14,4 +14,4 @@ const secureAPI = () => {
   };
 };
 
-module.exports = secureAPI;
+module.exports = { secureAPI };
