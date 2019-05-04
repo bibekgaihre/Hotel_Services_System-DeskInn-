@@ -1,9 +1,11 @@
 const router = require("express").Router();
-const { SecureAPI } = require("../../utils/secure");
+const SecureAPI = require("../../utils/secureAPI");
 const { Socket } = require("../../utils/socket");
 const RequestController = require("./request.controller");
 
-router.get("/", SecureAPI(), async (req, res, next) => {});
+router.get("/", SecureAPI(), async (req, res, next) => {
+  res.sendStatus(200);
+});
 router.post("/", SecureAPI(), async (req, res, next) => {
   const data = await RequestController.create(req.body);
   try {

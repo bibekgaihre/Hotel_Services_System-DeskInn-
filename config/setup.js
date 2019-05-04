@@ -9,9 +9,9 @@ var setup = {
     console.log("DB reset");
     let frontdesk = await UserController.createUsingEmail({
       _id: "5bb752fac800bb022cee5aba",
-      name: "Test Account",
+      name: "Frontdesk Account",
       email: "frontdesk@admin.com",
-      phone: "1234567890",
+
       password: "T$mp1234",
       roles: "frontdesk"
     });

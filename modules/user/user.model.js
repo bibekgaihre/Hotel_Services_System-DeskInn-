@@ -1,32 +1,26 @@
 const mongoose = require("mongoose");
-const config = require("config");
-const { ObjectId } = mongoose.Schema;
+// const config = require("config");
+// const { ObjectId } = mongoose.Schema;
 
-const UsersSchema = mongoose.Schema(
+const UserSchema = mongoose.Schema(
   {
     name: {
-      first_name: {
-        type: String,
-        required: true
-      },
-      last_name: {
-        type: String,
-        required: true
-      }
+      type: String,
+      required: true
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true
     },
     password: {
-      hash: {
-        type: String,
-        required: true
-      },
-      salt: String
+      type: String,
+      required: true
     },
-    is_active: { type: Boolean, required: true, default: true },
-    comms: [{ type: ObjectId, ref: "User_comm" }],
     roles: [
       {
         type: String,
-        $in: ["frontdesk", "food_operator", "housekeeper", "bellman"],
+        $in: ["frontdesk"],
         default: "user"
       }
     ]
@@ -46,26 +40,4 @@ const UsersSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("User", UsersSchema);
-
-UsersSchema.virtual("name.full").get(() => {
-  return this.name.first_name + " " + this.name.last_name;
-});
-
-UsersSchema.virtual("email").get(() => {
-  try {
-    if (this.comms.length == 0) return null;
-
-    let email = this.comms.find(e => {
-      return e.type === "email" && e.is_primary;
-    });
-    if (email) return email.address;
-
-    email = this.comms.find(e => {
-      return e.type === "email";
-    });
-    if (email) return email.address;
-  } catch (e) {
-    return e;
-  }
-});
+module.exports = mongoose.model("User", UserSchema);

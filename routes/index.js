@@ -11,6 +11,6 @@ router.get("/", function(req, res, next) {
 // router.use("/", uiRouter);
 router.use("/api/v1", apiRouter);
 router.use("/bot", BotRouter);
-router.use("/", authRouter);
+// router.use("/", authRouter);
 
 module.exports = router;
