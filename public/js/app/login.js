@@ -12,6 +12,7 @@ class Login {
       data: { email, password }
     })
       .done(function(data) {
+        console.log(data);
         window.location.replace("/");
       })
       .fail(function(err) {

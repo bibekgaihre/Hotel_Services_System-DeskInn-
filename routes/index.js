@@ -11,6 +11,10 @@ router.use("/bot", BotRouter);
 router.get("/login", function(req, res, next) {
   res.render("login", { title: "DeskInn Login" });
 });
+router.get("/logout", (req, res, next) => {
+  res.clearCookie("token");
+  res.redirect("/login");
+});
 
 // router.use("/", authRouter);
 

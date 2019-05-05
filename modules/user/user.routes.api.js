@@ -45,7 +45,6 @@ router.post("/", (req, res, next) => {
     });
 });
 router.post("/login", (req, res, next) => {
-  console.log(req.body);
   let payload = req.body;
   UserModel.find({ email: payload.email })
     .exec()
@@ -70,7 +69,10 @@ router.post("/login", (req, res, next) => {
               expiresIn: "24h"
             }
           );
-          return res.status(200).json({ message: "Login Success", token: token });
+          return res
+            .cookie("token", token)
+            .status(200)
+            .json({ message: "Login Success", token: token });
         } else {
           return res.status(401).json({
             message: "Email or password is incorrect. Please try again"
