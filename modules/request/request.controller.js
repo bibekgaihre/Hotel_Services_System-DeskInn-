@@ -1,11 +1,30 @@
 const RequestModel = require("./request.model");
-// const { Socket } = require("../../utils");
+const NotificationModel = require("../notification/notification.model");
+const { Socket } = require("../../utils/socket");
+const config = require("config");
 // const { TextUtils, ERR } = require("../../utils");
 
 class RequestController {
   constructor() {}
-  create(payload) {
+  async create(payload) {
     let request = new RequestModel(payload);
+    let info =
+      "There is a new " +
+      payload.request_type +
+      "  request from " +
+      payload.source +
+      " in Room No " +
+      payload.room_no;
+    console.log(payload);
+    let title = "New " + payload.request_type + " Request";
+    let url = config.get("notifications.url") + "/requests/" + request.id;
+    let notification = new NotificationModel({ info, title, url });
+    Socket.emit("new_request", {
+      title: title,
+      body: info,
+      url: url
+    });
+    await notification.save();
     return request.save();
   }
   async read({ limit, start, page, status }) {

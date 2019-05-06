@@ -16,6 +16,8 @@ const BellboyHandler = {
 
     if (deviceId === config.get("bot.alexa.RoomNo101")) {
       room_no = "101";
+    } else if (deviceId === config.get("bot.alexa.RoomNo102")) {
+      room_no = "102";
     }
     const responseBuilder = handlerInput.responseBuilder;
     try {
@@ -55,6 +57,8 @@ const TransportHandler = {
 
     if (deviceId === config.get("bot.alexa.RoomNo101")) {
       room_no = "101";
+    } else if (deviceId === config.get("bot.alexa.RoomNo102")) {
+      room_no = "102";
     }
     const responseBuilder = handlerInput.responseBuilder;
     try {
