@@ -15,7 +15,8 @@ class RequestController {
       payload.source +
       " in Room No " +
       payload.room_no;
-    console.log(payload);
+
+    await request.save();
     let title = "New " + payload.request_type + " Request";
     let url = config.get("notifications.url") + "/requests/" + request.id;
     let notification = new NotificationModel({ info, title, url });
@@ -25,7 +26,8 @@ class RequestController {
       url: url
     });
     await notification.save();
-    return request.save();
+
+    return RequestModel.findById(request.id);
   }
   async read({ limit, start, page, status }) {
     let total = await RequestModel.countDocuments();

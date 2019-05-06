@@ -39,7 +39,7 @@ const TableBookHandler = {
         source: "Alexa",
         details: { number_of_seat }
       };
-      console.log(payload);
+
       await RequestController.create(payload);
       speechText = `Your  request for booking table has been logged. Please make sure to arrive in time.Thank You `;
     } catch (e) {

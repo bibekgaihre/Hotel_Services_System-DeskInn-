@@ -50,7 +50,9 @@ router.post("/login", (req, res, next) => {
     .exec()
     .then(user => {
       if (user.length < 1) {
-        return res.status(404).json({ message: "Email not found." });
+        return res
+          .status(404)
+          .json({ message: "Email or password is incorrect. Please try again" });
       }
       bcrypt.compare(payload.password, user[0].password, (err, result) => {
         if (err) {
