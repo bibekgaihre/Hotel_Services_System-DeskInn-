@@ -2,7 +2,7 @@
   "version": "1.0",
   "session": {
     "new": false,
-    "sessionId": "amzn1.echo-api.session.5babd366-ea0d-4d79-ab80-8abd9874770f",
+    "sessionId": "amzn1.echo-api.session.d19e9bc7-3c3a-48d0-bbd2-ef850251bf66",
     "application": {
       "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d"
     },
@@ -36,7 +36,7 @@
         }
       },
       "apiEndpoint": "https://api.amazonalexa.com",
-      "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmE5ODZlZjgxLTdhZTItNDFlZC04NDQ5LTQ0OTdiZDgwYWU2ZCIsImV4cCI6MTU1NzEzMTAwMSwiaWF0IjoxNTU3MTMwNzAxLCJuYmYiOjE1NTcxMzA3MDEsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhTRk1GTE1MRFpJNFg1Wkc1TVJWUEJKRlY3SFJBVTNZNlpCNDNGVjVYSUFPVlNLSVJHVzZGU1A3NVhQQkRGWEJKVUZDRllWM1ZMTEoyR09FSEFSVVRCSkI1Q05ENkZSV1VVRUtRU0pHNExSUkI1Nkc0VlpKWURIS0hVQzI1Q0VHVEY2VkdHU1I0NkxXQktSTU1PRUhZWkU2NDVTNE5OU0JRWVBGNkZWQllLTENJN0pCV1JQWSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIWlhHUDRNSkJUVEVFRjQzTUZVSEs3NFZDMzVWRUtCVUZDQU43RkQ0VVpXT0w3Qk81U0NGWVVHQzJCRFRQR1ZFN0c0WFJYVjJaVEhYVjVTNTVIWVVPTkNOVENMWks2VklVQUNFQjJUVkVESUZCRjNCQldYWDJQQjJCNjZUQkY0T1dNNk5SRTdRSVRDT1hERUpKS1BGSzcyWTIzWFI2NDdaWVBSWkVFQ0c3RVlJSFBEN0tZQTUzWE5XWUFYSVFJSjRPTFROQjZDM0wyUExWQSJ9fQ.QUEDGS4mw-lGbiVrMLb7mm_DbOEULhdte6k0uZY9tCebHeqokCQEbOjxR3hIyaRsF4Dc1HJLtXHdi52zHDNdyFcW2jdSHWH6cnjf7YFBnyGluJEqrU9K9SsZWNPoFX9Ywn6h1k8c0Q_c9BqIvnsqkX6cSy1zwEOPJCn2V4db-HR2A95RB5QScIT9L0oZCfR5gNjq3dW5B5PiSg75Gdj-S8xvabXcBzTRJu4RizAnmhHIQKlGjUMsSNavm0BSqVdivA1ch5-qwtNO_EGc9jKJo9yhRZyXULvMU_V_WwpsgRgnCzxzRagXwlh3quPPG2tHsuaMXspc0NytnRCfRUPz5Q"
+      "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmE5ODZlZjgxLTdhZTItNDFlZC04NDQ5LTQ0OTdiZDgwYWU2ZCIsImV4cCI6MTU1NzUxMTc2MywiaWF0IjoxNTU3NTExNDYzLCJuYmYiOjE1NTc1MTE0NjMsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhTRk1GTE1MRFpJNFg1Wkc1TVJWUEJKRlY3SFJBVTNZNlpCNDNGVjVYSUFPVlNLSVJHVzZGU1A3NVhQQkRGWEJKVUZDRllWM1ZMTEoyR09FSEFSVVRCSkI1Q05ENkZSV1VVRUtRU0pHNExSUkI1Nkc0VlpKWURIS0hVQzI1Q0VHVEY2VkdHU1I0NkxXQktSTU1PRUhZWkU2NDVTNE5OU0JRWVBGNkZWQllLTENJN0pCV1JQWSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIWlhHUDRNSkJUVEVFRjQzTUZVSEs3NFZDMzVWRUtCVUZDQU43RkQ0VVpXT0w3Qk81U0NGWVVHQzJCRFRQR1ZFN0c0WFJYVjJaVEhYVjVTNTVIWVVPTkNOVENMWks2VklVQUNFQjJUVkVESUZCRjNCQldYWDJQQjJCNjZUQkY0T1dNNk5SRTdRSVRDT1hERUpKS1BGSzcyWTIzWFI2NDdaWVBSWkVFQ0c3RVlJSFBEN0tZQTUzWE5XWUFYSVFJSjRPTFROQjZDM0wyUExWQSJ9fQ.QOr8gNaTx_wRwKyigHEhtt6RhRsmbEXIjs7HP6T_bw8rLMJw5SsCEfGswZNRp5jSr7BJRkH1DBs9Z6b8bG03E1CjF-QwN89zqzEew5ZzDCYaAJCuYh7tPkABOLegMeWPMCTKdlcT3l3VYcEQdsh2v3X3PfPJNeREH6kNfPDgbRQ3K3iePz1FbLwYLlt2MZgTlcOl-KvVHY2xxWC3XiXnUMA6bk7bLwPHOCO7MWseiwvCQpS2yDo-gexZnNeq25QQkXAY9gysQl6vft-FYJtIyEO2htCrLXR6qmpx-R4r_lrE0_HXz-6M-GK9XA1aDgkMYWfa9SwP0A__Z0j6_mSK6Q"
     },
     "Viewport": {
       "experiences": [
@@ -55,27 +55,27 @@
       "currentPixelHeight": 600,
       "touch": [
         "SINGLE"
-      ]
+      ],
+      "video": {
+        "codecs": [
+          "H_264_42",
+          "H_264_41"
+        ]
+      }
     }
   },
   "request": {
     "type": "IntentRequest",
-    "requestId": "amzn1.echo-api.request.dcb08d99-9f72-4b33-813a-610f0a24d313",
-    "timestamp": "2019-05-06T08:18:21Z",
+    "requestId": "amzn1.echo-api.request.695c385c-bc1b-4ba0-8fa9-1f9e3d289da1",
+    "timestamp": "2019-05-10T18:04:23Z",
     "locale": "en-US",
     "intent": {
-      "name": "FoodOrderIntent",
+      "name": "SpaBookIntent",
       "confirmationStatus": "NONE",
       "slots": {
-        "number": {
-          "name": "number",
-          "value": "5",
-          "confirmationStatus": "NONE",
-          "source": "USER"
-        },
-        "food": {
-          "name": "food",
-          "value": "mushroom pizza",
+        "time": {
+          "name": "time",
+          "value": "19:00",
           "confirmationStatus": "NONE",
           "source": "USER"
         }

@@ -1,21 +1,28 @@
 const mongoose = require("mongoose");
-const UserController = require("../modules/user/user.controller");
-
+const axios = require("axios");
 mongoose.connect("mongodb://localhost:27017/DeskInnDB", { useNewUrlParser: true });
 
 var setup = {
   initialize: async () => {
     await mongoose.connection.dropDatabase();
     console.log("DB reset");
-    let frontdesk = await UserController.createUsingEmail({
-      _id: "5bb752fac800bb022cee5aba",
+    let data = {
       name: "Frontdesk Account",
       email: "frontdesk@admin.com",
-
       password: "T$mp1234",
       roles: "frontdesk"
-    });
-    console.log("users created");
+    };
+    let frontdesk = await axios({
+      method: "post",
+      baseURL: "localhost:localhost:3000/api/v1/user",
+      data
+    })
+      .then(function(response) {
+        console.log("user created");
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
 
     return frontdesk;
   }

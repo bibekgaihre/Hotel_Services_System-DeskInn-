@@ -55,5 +55,8 @@ class RequestController {
   async update(id, payload) {
     return RequestModel.findByIdAndUpdate(id, payload);
   }
+  changeStatus(id, note, status) {
+    return RequestModel.findByIdAndUpdate({ _id: id }, { status: status, note: note });
+  }
 }
 module.exports = new RequestController();

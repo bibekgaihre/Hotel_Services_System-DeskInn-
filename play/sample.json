@@ -1,7 +1,9 @@
 [
   {
+    "name": "frontdesk",
     "email": "frontdesk@admin.com",
-    "password": "T$mp1234"
+    "password": "T$mp1234",
+    "roles": ["frontdesk"]
   },
   {
     "_id": "5ccd9374872d7c16b8bf1aa4",

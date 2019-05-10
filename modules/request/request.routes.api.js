@@ -44,5 +44,14 @@ router.put("/:id", SecureAPI(), async (req, res, next) => {
     return e;
   }
 });
-router.put("/:id/status", SecureAPI(), async (req, res, next) => {});
+router.put("/:id/status", SecureAPI(), async (req, res, next) => {
+  console.log(req.params.id);
+  console.log("hello");
+  const data = await RequestController.changeStatus(req.params.id, req.body.note, req.body.status);
+  try {
+    return res.json(data);
+  } catch (e) {
+    return e;
+  }
+});
 module.exports = router;

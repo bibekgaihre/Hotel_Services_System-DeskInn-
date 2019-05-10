@@ -50,11 +50,7 @@
               </a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="accounts.html">
-                 Accounts
-              </a>
-            </li>
+        
             <li class="nav-item">
                 <a class="nav-link " href="/feedback">
                    Feedback
@@ -257,7 +253,10 @@
       $("#btnCancel").hide();
       request.enableEdit(false);
       request.getDetail(request_id);
-
+      $("#btnUpdate").click(function (e) {
+        e.preventDefault();
+        request.update(request_id);
+      }); 
       $("#destinationdetail").hide();
       $('select[name="request_type"]').change(function(){
         $("#destinationdetail").hide();
@@ -277,6 +276,7 @@
       $("#btnCancel").on("click",e=>{
         request.enableEdit(false);
       })
+   
     $("#msg").hide();
  
     });

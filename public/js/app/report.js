@@ -6,6 +6,7 @@ class Report {
       headers: { Authorization: "Bearer " + Cookies.get("token") }
     })
       .done(function(d) {
+        console.log(d.total_requests);
         var options = {
           title: {
             text: `Total Number of Requests: ${d.total}`

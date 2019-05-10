@@ -14,7 +14,7 @@ class Request {
             `<div class="media tm-notification-item">
               <div class="media-body" style="cursor:pointer" >
                 <p class="mb-2" style="color:#ffffff" >
-                  <b>${d[i].info}</b> 
+                  <b>${d[i].info}</b>
                   .
                 </p>
                 <span class="tm-small tm-text-color-secondary"></span>
@@ -48,7 +48,9 @@ class Request {
     this.dTable = $("#dashboard").DataTable({
       pageLength: 50,
       processing: true,
-
+      pagination: true,
+      bPagination: true,
+      pagingType: "full_numbers",
       responsive: true,
       filter: true,
       sort: false,
@@ -122,15 +124,64 @@ class Request {
             } else {
               return `<button type="button" class="btn btn-info" title="Detail" onclick="window.location.replace('/request/${
                 d._id
-              }')">Detail </button>  &nbsp;<button type="button" class="btn btn-danger" id="cancelbutton" title="cancel" onclick="requests.cancelRequest('${
+              }')">Detail </button>  &nbsp;<button type="button" class="btn btn-danger" id="cancelbutton" title="cancel" onclick="request.cancelRequest('${
                 d._id
-              }')">Cancel </button>  &nbsp;<button type="button" class="btn btn-success" id="completebutton" title="completed" onclick="requests.completeRequest('${
+              }')">Cancel </button>  &nbsp;<button type="button" class="btn btn-success" id="completebutton" title="completed" onclick="request.completeRequest('${
                 d._id
               }')">Completed </button>  `;
             }
           }
         }
       ]
+    });
+  }
+  cancelRequest(id) {
+    swal({
+      title: "Are you sure?",
+      text: "You are canceling a request",
+      content: {
+        element: "input",
+        attributes: {
+          placeholder: "Type description of cancelling this request"
+        }
+      },
+      buttons: { cancel: true, confirm: "Confirm" },
+      dangerMode: true,
+      icon: "warning",
+      closeOnClickOutside: false
+    }).then(willCancel => {
+      if (willCancel) {
+        var note = willCancel;
+        $.ajax({
+          url: `/api/v1/request/${id}/status`,
+          headers: { Authorization: "Bearer " + Cookies.get("token") },
+          method: "PUT",
+          data: { note, status: "cancelled" }
+        }).done(d => {
+          this.dTable.ajax.reload();
+        });
+      }
+    });
+  }
+  completeRequest(id) {
+    swal({
+      title: "Are you sure?",
+      text: "You are marking the task to completed",
+      buttons: { cancel: true, confirm: "Confirm" },
+      dangerMode: false,
+      icon: "success",
+      closeOnClickOutside: false
+    }).then(willConfirm => {
+      if (willConfirm) {
+        $.ajax({
+          url: `/api/v1/request/${id}/status`,
+          headers: { Authorization: "Bearer " + Cookies.get("token") },
+          method: "PUT",
+          data: { status: "completed" }
+        }).done(d => {
+          this.dTable.ajax.reload();
+        });
+      }
     });
   }
   save() {
@@ -202,6 +253,7 @@ class Request {
   enableEdit(editMode) {
     if (editMode) {
       $("#editable :input").prop("disabled", false);
+      $("#btnUpdate").prop("disabled", false);
       $("#btnUpdate").show();
       $("#btnCancel").show();
       $("#btnEdit").hide();
@@ -218,11 +270,12 @@ class Request {
       headers: { Authorization: "Bearer " + Cookies.get("token") },
       method: "GET"
     }).done(data => {
-      console.log(data);
+      if (data.status === "completed" || data.status === "cancelled") {
+        $("#btnEdit").hide();
+      }
       if (data.requested_time === null) data.requested_time === "";
       else data.requested_time = moment.utc(data.requested_time).format("lll");
       if (data.request_type === "transport") {
-        console.log(data.details);
         $("#destinationdetail").show();
         $("#destination").val(data.details);
       }
@@ -235,5 +288,46 @@ class Request {
       // $("#status").val(data.status);
       $(`#status option[value=${data.status}]`).prop("selected", true);
     });
+  }
+  update(id) {
+    let requested_time = $("#requested_time").val();
+    let room_no = $("#room_no").val();
+    let source = $("#source").val();
+    let request_type = $("#request_type").val();
+    let description = $("textarea#description").val();
+    let destination = $("#destination").val();
+    let assigned_to = $("#assigned_to").val();
+    let status = $("#status").val();
+    if (!assigned_to) {
+      $("#msg").text("Please select a person to assign the task");
+      $("#msg").show();
+    } else if (assigned_to && (status === "new" || status === "")) {
+      $("#msg").text("Invalid Status");
+      $("#msg").show();
+    } else {
+      let data = {
+        room_no,
+        source,
+        request_type,
+        requested_time,
+        status,
+        note: description,
+        assigned_to,
+        details: destination
+      };
+      $.ajax({
+        url: "/api/v1/request/" + id,
+        headers: { Authorization: "Bearer " + Cookies.get("token") },
+        method: "PUT",
+        data
+      })
+        .done(d => {
+          this.enableEdit(false);
+        })
+        .fail(e => {
+          $("#msg").show();
+          $("#msg").html(e.responseJSON.message);
+        });
+    }
   }
 }
