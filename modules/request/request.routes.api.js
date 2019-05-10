@@ -4,7 +4,7 @@ const { Socket } = require("../../utils/socket");
 const RequestController = require("./request.controller");
 
 router.get("/", SecureAPI(), async (req, res, next) => {
-  let limit = parseInt(req.query.limit) || 50;
+  let limit = parseInt(req.query.limit) || 25;
   let start = parseInt(req.query.start) || 0;
   let page = parseInt(start) / parseInt(limit) + 1;
   let status = req.query.status || "inbox";

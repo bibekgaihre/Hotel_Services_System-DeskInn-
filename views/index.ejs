@@ -7,6 +7,7 @@
   <head>
     <title>DeskInn-Dashboard</title>
     <% include layouts/head %>
+    <link href="/css/plugins/dataTables/datatables.min.css" rel="stylesheet" />
   </head>
 
   <body id="reportsPage">
@@ -83,16 +84,16 @@
           <div class="col-12 tm-block-col">
             <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
               <h2 class="tm-block-title">Request List</h2>
-              <table class="table">
+              <table class="table" id="dashboard" class="display">
                 <thead>
                   <tr>
-                    <th scope="col">ROOM NO.</th>
-                    <th scope="col">STATUS</th>
-                    <th scope="col">REQUEST TYPE</th>
-                    <th scope="col">REQUESTED TIME</th>
-                    <th scope="col">ASSIGNED TO</th>
-                    <th scope="col">STATUS</th>
-                    <th scope="col">ACTION</th>
+                    <th>ROOM NO.</th>
+                    <th>SOURCE</th>
+                    <th>REQUEST TYPE</th>
+                    <th>REQUESTED TIME</th>
+                    <th>ASSIGNED TO</th>
+                    <th>STATUS</th>
+                    <th>ACTION</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -130,6 +131,12 @@
     </div>
 
     <% include layouts/foot %>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"
+    ></script>
+    <script src="/js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
     <script src="/js/app/request.js"></script>
     <script src="/js/app/notifications.js"></script>
 
@@ -138,6 +145,7 @@
       $(document).ready(function() {
         request.listnotification();
         request.getGreetings();
+        request.list();
       });
     </script>
   </body>

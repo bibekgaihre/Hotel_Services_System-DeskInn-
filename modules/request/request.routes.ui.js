@@ -14,5 +14,13 @@ router.get("/reports", SecureUI(), async (req, res, next) => {
     title: "DeskInn"
   });
 });
+router.get("/:id", SecureUI(), async (req, res, next) => {
+  const request_id = req.params.id;
+  res.render("request/details", {
+    name: "Request Detail",
+    title: "DeskInn",
+    request_id
+  });
+});
 
 module.exports = router;

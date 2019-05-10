@@ -1,4 +1,7 @@
 class Request {
+  constructor(dTable) {
+    this.dTable = dTable;
+  }
   listnotification() {
     $.ajax({
       url: "/api/v1/notification",
@@ -40,6 +43,95 @@ class Request {
     }
 
     $("#Greetings").append(themessage);
+  }
+  list() {
+    this.dTable = $("#dashboard").DataTable({
+      pageLength: 50,
+      processing: true,
+
+      responsive: true,
+      filter: true,
+      sort: false,
+      serverSide: true,
+      searchDelay: 500,
+      dom: "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-4'i><'col-sm-8'<'float-right p-2'p>>>",
+      ajax: {
+        url: "/api/v1/request",
+        headers: { Authorization: "Bearer " + Cookies.get("token") },
+        method: "GET",
+        dataFilter: data => {
+          let json = JSON.parse(data);
+          json.recordsTotal = json.total;
+          json.recordsFiltered = json.total;
+          return JSON.stringify(json);
+        },
+        data: function(d) {
+          return $.extend(
+            {},
+            {
+              start: d.start,
+              limit: d.length,
+              search: d.search
+            }
+          );
+        }
+      },
+      initComplete: (settings, json) => {
+        setInterval(() => {
+          this.dTable.ajax.reload();
+        }, 5000);
+      },
+      columns: [
+        {
+          data: "room_no"
+        },
+        {
+          data: "source"
+        },
+        {
+          data: "request_type"
+        },
+        {
+          data: null,
+          render: d => {
+            if (d.requested_time == null) {
+              return "";
+            } else if (d.requested_time) {
+              return moment.utc(d.requested_time).format("lll");
+              //  return moment(d.requested_time).format("lll");
+            }
+          }
+        },
+        {
+          data: null,
+          render: d => {
+            return d.assigned_to || "";
+          }
+        },
+        {
+          data: "status"
+        },
+        {
+          data: null,
+          class: "text-center",
+          render: (d, type, row, meta) => {
+            if (d.status === "cancelled" || d.status === "completed") {
+              return `<button type="button" class="btn btn-info" title="Detail" onclick="window.location.replace('/request/${
+                d._id
+              }')">Detail </button>`;
+            } else {
+              return `<button type="button" class="btn btn-info" title="Detail" onclick="window.location.replace('/request/${
+                d._id
+              }')">Detail </button>  &nbsp;<button type="button" class="btn btn-danger" id="cancelbutton" title="cancel" onclick="requests.cancelRequest('${
+                d._id
+              }')">Cancel </button>  &nbsp;<button type="button" class="btn btn-success" id="completebutton" title="completed" onclick="requests.completeRequest('${
+                d._id
+              }')">Completed </button>  `;
+            }
+          }
+        }
+      ]
+    });
   }
   save() {
     let status;
@@ -95,7 +187,7 @@ class Request {
           swal({
             title: "Done",
             text: "Users Request Registered!",
-            buttons: true,
+            buttons: false,
             timer: 3000
           }).then(() => {
             location.replace("/ ");
@@ -106,5 +198,42 @@ class Request {
           $("#msg").html(e.responseJSON.message);
         });
     }
+  }
+  enableEdit(editMode) {
+    if (editMode) {
+      $("#editable :input").prop("disabled", false);
+      $("#btnUpdate").show();
+      $("#btnCancel").show();
+      $("#btnEdit").hide();
+    } else {
+      $("#frmDetail :input").attr("disabled", true);
+      $("#btnUpdate").hide();
+      $("#btnCancel").hide();
+      $("#btnEdit").show();
+    }
+  }
+  getDetail(id) {
+    $.ajax({
+      url: `/api/v1/request/${id}`,
+      headers: { Authorization: "Bearer " + Cookies.get("token") },
+      method: "GET"
+    }).done(data => {
+      console.log(data);
+      if (data.requested_time === null) data.requested_time === "";
+      else data.requested_time = moment.utc(data.requested_time).format("lll");
+      if (data.request_type === "transport") {
+        console.log(data.details);
+        $("#destinationdetail").show();
+        $("#destination").val(data.details);
+      }
+      $("#room_no").val(data.room_no);
+      $("#source").val(data.source);
+      $("#request_type").val(data.request_type);
+      $("textarea#description").val(data.note);
+      $("#requested_time").val(data.requested_time);
+      $("#assigned_to").val(data.assigned_to);
+      // $("#status").val(data.status);
+      $(`#status option[value=${data.status}]`).prop("selected", true);
+    });
   }
 }
