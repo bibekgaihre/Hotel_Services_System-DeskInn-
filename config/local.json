@@ -19,5 +19,9 @@
   },
   "notifications": {
     "url": "localhost:3000"
+  },
+  "mail": {
+    "username": "",
+    "password": ""
   }
 }

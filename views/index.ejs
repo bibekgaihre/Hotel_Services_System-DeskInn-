@@ -65,23 +65,10 @@
                   Accounts
                 </a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span> Settings </span>
+              <li class="nav-item">
+                <a class="nav-link " href="/feedback">
+                  Feedback
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Billing</a>
-                  <a class="dropdown-item" href="#">Customize</a>
-                </div>
               </li>
             </ul>
             <ul class="navbar-nav">
@@ -95,7 +82,7 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <p class="text-white mt-5 mb-5">######Good Morning, <b>Admin</b></p>
+            <p class="text-white mt-5 mb-5" id="Greetings" style="font-size:20px"></p>
           </div>
         </div>
         <!-- row -->
@@ -163,6 +150,7 @@
       const request = new Request();
       $(document).ready(function() {
         request.listnotification();
+        request.getGreetings();
       });
     </script>
   </body>

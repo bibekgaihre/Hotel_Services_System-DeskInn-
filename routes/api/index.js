@@ -5,4 +5,5 @@ const notificationRouter = require("../../modules/notification/notification.rout
 apiRouter.use("/user", usersRouter);
 apiRouter.use("/request", requestRouter);
 apiRouter.use("/notification", notificationRouter);
+
 module.exports = apiRouter;

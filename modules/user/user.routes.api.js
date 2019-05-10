@@ -3,6 +3,8 @@ const UserController = require("./user.controller");
 const bcrypt = require("bcryptjs");
 const config = require("config");
 const UserModel = require("./user.model");
+const SecureAPI = require("../../utils/secureAPI");
+const Mailer = require("../../utils/mailer");
 const jwt = require("jsonwebtoken");
 
 router.post("/", (req, res, next) => {
@@ -86,6 +88,16 @@ router.post("/login", (req, res, next) => {
       console.log(err);
       res.status(500).json({ error: err });
     });
+});
+router.post("/sendFeedback", SecureAPI(), async (req, res, next) => {
+  console.log(req.body);
+  let description = req.body.description;
+  let data = await Mailer.sendMail(description);
+  try {
+    return res.json(data);
+  } catch (e) {
+    return e;
+  }
 });
 
 module.exports = router;

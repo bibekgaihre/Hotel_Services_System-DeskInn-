@@ -10,4 +10,9 @@ router.get("/", SecureUI(), (req, res, next) => {
   });
 });
 
+router.get("/feedback", SecureUI(), (req, res, next) => {
+  res.render("feedback", {
+    title: "DeskInn"
+  });
+});
 module.exports = router;
