@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Send Feedback</title>
-    <% include layouts/head %>
+    <title>Reports</title>
+    <% include ../layouts/head %>
     <link href="/css/plugins/datepicker/datepicker3.css" rel="stylesheet" />
     <link href="/css/plugins/clockpicker/clockpicker.css" rel="stylesheet" />
   </head>
@@ -34,7 +34,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/request/reports">
+              <a class="nav-link active" href="/request/reports">
                 Reports
               </a>
             </li>
@@ -50,7 +50,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/feedback">
+              <a class="nav-link" href="/feedback">
                 Feedback
               </a>
             </li>
@@ -69,59 +69,36 @@
           <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
             <div class="row">
               <div class="col-12">
-                <h2 class="tm-block-title d-inline-block">Write Feedback About System</h2>
+                <h2 class="tm-block-title d-inline-block">Reports:</h2>
               </div>
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-12 col-lg-12 col-md-12">
-                <form class="tm-edit-product-form">
-                  <div class="form-group mb-3">
-                    <label for="description">Feedback</label>
-                    <textarea
-                      class="form-control validate"
-                      rows="12"
-                      id="description"
-                      name="description"
-                    ></textarea>
-                  </div>
-                  <br />
-                  <div class="form-group mb-3" id="errormsg">
-                    <div
-                      id="msg"
-                      class="alert alert-danger"
-                      role="alert"
-                      style="color:#ffffff;background-color:#435c70;border-color: #ffffff; "
-                    ></div>
-                  </div>
-
-                  <div class="col-12">
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-block text-uppercase"
-                      id="btnAdd"
-                    >
-                      Send Feedback
-                    </button>
-                  </div>
-                </form>
+                <div class="form-group mb-3">
+                  <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                </div>
+                <br />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <% include layouts/footer %> <% include layouts/foot %>
+    <% include ../layouts/footer %> <% include ../layouts/foot %>
 
-    <script src="/js/app/feedback.js"></script>
-
+    <script src="/js/app/report.js"></script>
+    <script
+      type="text/javascript"
+      src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"
+    ></script>
     <script>
-      const feedback = new Feedback();
+      const report = new Report();
       $(document).ready(function() {
-        $("#btnAdd").click(function(e) {
-          e.preventDefault();
-          feedback.sendMail();
-        });
-        $("#msg").hide();
+        report.listReport();
       });
     </script>
   </body>

@@ -60,7 +60,10 @@ class Request {
       status = "assigned";
     }
     if (request_type !== "food" && request_type !== "toiletries" && !$("#requested_time").val()) {
-      $("#msg").text("requested time not inserted");
+      $("#msg").text("Please select requested time");
+      $("#msg").show();
+    } else if (request_type === "transport" && !destination) {
+      $("#msg").text("Please enter the destination");
       $("#msg").show();
     } else if ((request_type === "food" || request_type === "toiletries") && !description) {
       $("#msg").text(

@@ -8,5 +8,11 @@ router.get("/new", SecureUI(), async (req, res, next) => {
     title: "DeskInn"
   });
 });
+router.get("/reports", SecureUI(), async (req, res, next) => {
+  res.render("request/reports", {
+    name: "Reports",
+    title: "DeskInn"
+  });
+});
 
 module.exports = router;

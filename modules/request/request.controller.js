@@ -31,6 +31,9 @@ class RequestController {
   }
   async read({ limit, start, page, status }) {
     let total = await RequestModel.countDocuments();
+    let total_requests = await RequestModel.aggregate([
+      { $group: { _id: "$request_type", count: { $sum: 1 } } }
+    ]);
 
     let data = await RequestModel.find()
       .skip(start)
@@ -42,6 +45,7 @@ class RequestController {
       start,
       page,
       status,
+      total_requests,
       data
     };
   }
