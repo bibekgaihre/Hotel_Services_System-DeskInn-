@@ -16,19 +16,19 @@ const LaunchRequestHandler = {
   }
 };
 
-const UnhandledIntent = {
-  canHandle(handlerInput) {
-    return true;
-  },
-  handle(handlerInput, error) {
-    // console.log(`Error handled: ${error.message}`);
+// const UnhandledIntent = {
+//   canHandle(handlerInput) {
+//     return true;
+//   },
+//   handle(handlerInput, error) {
+//     // console.log(`Error handled: ${error.message}`);
 
-    return handlerInput.responseBuilder
-      .speak("Sorry. there was an error")
-      .reprompt("Sorry. there was an error")
-      .getResponse();
-  }
-};
+//     return handlerInput.responseBuilder
+//       .speak("Sorry. there was an error")
+//       .reprompt("Sorry. there was an error")
+//       .getResponse();
+//   }
+// };
 
 const SessionEndedRequestHandler = {
   canHandle(handlerInput) {
@@ -59,4 +59,4 @@ const HelpHandler = {
   }
 };
 
-module.exports = { LaunchRequestHandler, UnhandledIntent, SessionEndedRequestHandler, HelpHandler };
+module.exports = { LaunchRequestHandler, SessionEndedRequestHandler, HelpHandler };

@@ -41,7 +41,7 @@ const TableBookHandler = {
       };
 
       await RequestController.create(payload);
-      speechText = `Your  request for booking table has been logged. Please make sure to arrive in time.Thank You `;
+      speechText = `Your  request for booking table has been logged. Please make sure to arrive in time Thank You `;
     } catch (e) {
       speechText = `Some error occured, please try again.`;
     }

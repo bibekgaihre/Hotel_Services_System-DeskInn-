@@ -6,7 +6,6 @@ class Report {
       headers: { Authorization: "Bearer " + Cookies.get("token") }
     })
       .done(function(d) {
-        console.log(d.total_requests);
         var options = {
           title: {
             text: `Total Number of Requests: ${d.total}`
@@ -32,5 +31,10 @@ class Report {
       .fail(function(err) {
         alert(err.responseJSON.message);
       });
+  }
+  toObject(arr) {
+    var rv = {};
+    for (var i = 0; i < arr.length; ++i) rv[i] = arr[i];
+    return rv;
   }
 }

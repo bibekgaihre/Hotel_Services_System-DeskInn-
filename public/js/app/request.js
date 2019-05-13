@@ -99,7 +99,7 @@ class Request {
             if (d.requested_time == null) {
               return "";
             } else if (d.requested_time) {
-              return moment.utc(d.requested_time).format("lll");
+              return moment(d.requested_time).format("lll");
               //  return moment(d.requested_time).format("lll");
             }
           }
@@ -270,19 +270,52 @@ class Request {
       headers: { Authorization: "Bearer " + Cookies.get("token") },
       method: "GET"
     }).done(data => {
+      console.log(data);
       if (data.status === "completed" || data.status === "cancelled") {
         $("#btnEdit").hide();
       }
       if (data.requested_time === null) data.requested_time === "";
-      else data.requested_time = moment.utc(data.requested_time).format("lll");
+      else data.requested_time = moment(data.requested_time).format("lll");
       if (data.request_type === "transport") {
-        $("#destinationdetail").show();
-        $("#destination").val(data.details);
+        if (data.status === "new") {
+          $("#destinationdetail").show();
+          $("#destination").val(data.details.destination);
+        } else {
+          $("#destinationdetail").show();
+          $("#destination").val(data.details);
+        }
+      }
+      if (data.request_type === "food") {
+        if (data.status == "new") {
+          $("textarea#description").val(
+            "food name: " + data.details.food + "\nfood quantity: " + data.details.food_quantity
+          );
+        } else {
+          $("textarea#description").val(data.note);
+        }
+      } else if (data.request_type === "toiletries") {
+        if (data.status == "new") {
+          $("textarea#description").val(
+            "Item name: " +
+              data.details.toiletries +
+              "\nitem quantity: " +
+              data.details.toiletries_quantity
+          );
+        } else {
+          $("textarea#description").val(data.note);
+        }
+      } else if (data.request_type === "tablebook") {
+        if (data.status == "new") {
+          $("textarea#description").val("Number of  seats: " + data.details.number_of_seat);
+        } else {
+          $("textarea#description").val(data.note);
+        }
+      } else {
+        $("textarea#description").val(data.note);
       }
       $("#room_no").val(data.room_no);
       $("#source").val(data.source);
       $("#request_type").val(data.request_type);
-      $("textarea#description").val(data.note);
       $("#requested_time").val(data.requested_time);
       $("#assigned_to").val(data.assigned_to);
       // $("#status").val(data.status);

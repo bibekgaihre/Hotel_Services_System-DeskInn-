@@ -7,8 +7,7 @@ let skill;
 const {
   LaunchRequestHandler,
   SessionEndedRequestHandler,
-  HelpHandler,
-  UnhandledIntent
+  HelpHandler
 } = require("../../../modules/bot/general/general.handlers");
 //importing housekeeping handler files
 const {
@@ -45,8 +44,7 @@ router.post("/", (req, res, next) => {
         TableBookHandler,
         SpaBookHandler,
         HelpHandler,
-        SessionEndedRequestHandler,
-        UnhandledIntent
+        SessionEndedRequestHandler
       )
       .create();
   }
