@@ -8,24 +8,21 @@ const {
   LaunchRequestHandler,
   SessionEndedRequestHandler,
   HelpHandler
-} = require("../../../modules/bot/general/general.handlers");
+} = require("../../../modules/request/general.handlers");
 //importing housekeeping handler files
 const {
   CleaningHandler,
   ToiletriesHandler
-} = require("../../../modules/bot/housekeeping/housekeeping.handlers");
+} = require("../../../modules/request/housekeeping.handlers");
 //importing concierge handler files
-const {
-  BellboyHandler,
-  TransportHandler
-} = require("../../../modules/bot/concierge/concierge.handler");
+const { BellboyHandler, TransportHandler } = require("../../../modules/request/concierge.handler");
 //importing food handler files
-const { FoodOrderHandler } = require("../../../modules/bot/food/food.handlers");
+const { FoodOrderHandler } = require("../../../modules/request/food.handlers");
 router.get("/", (req, res, next) => {
   res.sendStatus(200);
 });
 //importing other handler files
-const { TableBookHandler, SpaBookHandler } = require("../../../modules/bot/other/other.handlers");
+const { TableBookHandler, SpaBookHandler } = require("../../../modules/request/other.handlers");
 router.post("/", (req, res, next) => {
   // Build the context manually, because Amazon Lambda is missing
   fs.writeFile(__dirname + "/../../../play/response.alexa.json", JSON.stringify(req.body, null, 2));

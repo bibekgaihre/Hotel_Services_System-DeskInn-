@@ -2,7 +2,7 @@
   "version": "1.0",
   "session": {
     "new": false,
-    "sessionId": "amzn1.echo-api.session.4e9a9c7a-ad1c-4468-88e5-c0cf2d345ac8",
+    "sessionId": "amzn1.echo-api.session.1a5eae06-d37c-4a04-802a-9bbbc35a2493",
     "application": {
       "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d"
     },
@@ -11,6 +11,9 @@
     }
   },
   "context": {
+    "Display": {
+      "token": ""
+    },
     "System": {
       "application": {
         "applicationId": "amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d"
@@ -19,46 +22,57 @@
         "userId": "amzn1.ask.account.AHZXGP4MJBTTEEF43MFUHK74VC35VEKBUFCAN7FD4UZWOL7BO5SCFYUGC2BDTPGVE7G4XRXV2ZTHXV5S55HYUONCNTCLZK6VIUACEB2TVEDIFBF3BBWXX2PB2B66TBF4OWM6NRE7QITCOXDEJJKPFK72Y23XR647ZYPRZEECG7EYIHPD7KYA53XNWYAXIQIJ4OLTNB6C3L2PLVA"
       },
       "device": {
-        "deviceId": "amzn1.ask.device.AHSFMFLMLDZI4X5ZG5MRVPBJFV7P2T7KOLWM3NIM3F5544JAUDVZ2K5D6EG7HZ363ZZMV2YAV2DIUCWGCBVGXZ2E6EO4WUNUBYLEXSDN2NJF6BU3D33ZQDPRFQQVUHXU6NJ45RDVHBLFTLAFPY6C53UTM7VYOO42T6BCQDIBBEWLFD2Y66FCI",
-        "supportedInterfaces": {}
+        "deviceId": "amzn1.ask.device.AHSFMFLMLDZI4X5ZG5MRVPBJFV7HRAU3Y6ZB43FV5XIAOVSKIRGW6FSP75XPBDFXBJUFCFYV3VLLJ2GOEHARUTBJB5CND6FRWUUEKQSJG4LRRB56G4VZJYDHKHUC25CEGTF6VGGSR46LWBKRMMOEHYZE645S4NNSBQYPF6FVBYKLCI7JBWRPY",
+        "supportedInterfaces": {
+          "Display": {
+            "templateVersion": "1.0",
+            "markupVersion": "1.0"
+          },
+          "Alexa.Presentation.APL": {
+            "runtime": {
+              "maxVersion": "1.0"
+            }
+          }
+        }
       },
       "apiEndpoint": "https://api.amazonalexa.com",
-      "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmE5ODZlZjgxLTdhZTItNDFlZC04NDQ5LTQ0OTdiZDgwYWU2ZCIsImV4cCI6MTU1Nzc2NjMzNCwiaWF0IjoxNTU3NzY2MDM0LCJuYmYiOjE1NTc3NjYwMzQsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhTRk1GTE1MRFpJNFg1Wkc1TVJWUEJKRlY3UDJUN0tPTFdNM05JTTNGNTU0NEpBVURWWjJLNUQ2RUc3SFozNjNaWk1WMllBVjJESVVDV0dDQlZHWFoyRTZFTzRXVU5VQllMRVhTRE4yTkpGNkJVM0QzM1pRRFBSRlFRVlVIWFU2Tko0NVJEVkhCTEZUTEFGUFk2QzUzVVRNN1ZZT080MlQ2QkNRRElCQkVXTEZEMlk2NkZDSSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIWlhHUDRNSkJUVEVFRjQzTUZVSEs3NFZDMzVWRUtCVUZDQU43RkQ0VVpXT0w3Qk81U0NGWVVHQzJCRFRQR1ZFN0c0WFJYVjJaVEhYVjVTNTVIWVVPTkNOVENMWks2VklVQUNFQjJUVkVESUZCRjNCQldYWDJQQjJCNjZUQkY0T1dNNk5SRTdRSVRDT1hERUpKS1BGSzcyWTIzWFI2NDdaWVBSWkVFQ0c3RVlJSFBEN0tZQTUzWE5XWUFYSVFJSjRPTFROQjZDM0wyUExWQSJ9fQ.I3P1CqecTq0iIsanRJk4P0L5-HrC5GcV2IsavkHAycF8RCYepoNArZY_SCSjWJ7k8ccBHsIbChV1i0nm9ySAm9qctUXNiVXnH2_wmeZQ5j_K44phAf5XJ9xBaA3VMmyRwJLtafIUfayOHLv8hvaf0x4QkGxDI3honyu1DP5oCxCqKKBXpH2w5eMfPC_v08B1959-_SUKYb4T1oWHc7KHbuw_mWdeE4V3I10I9D5vaE7oCuhwd9dT9qZPJhgqEnTHQjH7dXMGL1YrtT4-XQLXltTEHpZZVYnDfwdEM-XD7Fa3uIyTdmR4F-6odsz-8XKLCXfH_iKGq2gJOtrgtzQbvA"
+      "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmE5ODZlZjgxLTdhZTItNDFlZC04NDQ5LTQ0OTdiZDgwYWU2ZCIsImV4cCI6MTU1NzgwMDAxMywiaWF0IjoxNTU3Nzk5NzEzLCJuYmYiOjE1NTc3OTk3MTMsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhTRk1GTE1MRFpJNFg1Wkc1TVJWUEJKRlY3SFJBVTNZNlpCNDNGVjVYSUFPVlNLSVJHVzZGU1A3NVhQQkRGWEJKVUZDRllWM1ZMTEoyR09FSEFSVVRCSkI1Q05ENkZSV1VVRUtRU0pHNExSUkI1Nkc0VlpKWURIS0hVQzI1Q0VHVEY2VkdHU1I0NkxXQktSTU1PRUhZWkU2NDVTNE5OU0JRWVBGNkZWQllLTENJN0pCV1JQWSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIWlhHUDRNSkJUVEVFRjQzTUZVSEs3NFZDMzVWRUtCVUZDQU43RkQ0VVpXT0w3Qk81U0NGWVVHQzJCRFRQR1ZFN0c0WFJYVjJaVEhYVjVTNTVIWVVPTkNOVENMWks2VklVQUNFQjJUVkVESUZCRjNCQldYWDJQQjJCNjZUQkY0T1dNNk5SRTdRSVRDT1hERUpKS1BGSzcyWTIzWFI2NDdaWVBSWkVFQ0c3RVlJSFBEN0tZQTUzWE5XWUFYSVFJSjRPTFROQjZDM0wyUExWQSJ9fQ.coKy3n7BlaHH2aKLPmKo8M68mSmLdp3atV6CGeyCekx-P4tWa9P3fd3exhwb8zm9-Lj91qjqAkd-nZyQ1e1tF2Xt5xtzdgo38oqAaoOEnPLE006LHQQaTcj18bDPb-FL7ZbqkdpEANrHfSiCsC6IY0ipySJNTai9rembdqitXnYndbZX5MicFgVzFRSYpAFWEdQ-Zj1YpUUmAuzt32y39gr7UkSyhiJVtIs-ktklylPLIQ-6CMHETOnNTQTAC-dx5zJTM3xKdi3TO_usse5MrS0hSpfzLKo-n0pOzr0O79XOgA66ZBtnydUmhNZV3dqgubBG6uMboJMxJFGmmJHI4Q"
+    },
+    "Viewport": {
+      "experiences": [
+        {
+          "arcMinuteWidth": 246,
+          "arcMinuteHeight": 144,
+          "canRotate": false,
+          "canResize": false
+        }
+      ],
+      "shape": "RECTANGLE",
+      "pixelWidth": 1024,
+      "pixelHeight": 600,
+      "dpi": 160,
+      "currentPixelWidth": 1024,
+      "currentPixelHeight": 600,
+      "touch": [
+        "SINGLE"
+      ],
+      "video": {
+        "codecs": [
+          "H_264_42",
+          "H_264_41"
+        ]
+      }
     }
   },
   "request": {
-    "type": "IntentRequest",
-    "requestId": "amzn1.echo-api.request.43ffb0fa-c78e-4a3f-ad04-19bd8bc65445",
-    "timestamp": "2019-05-13T16:47:14Z",
+    "type": "SessionEndedRequest",
+    "requestId": "amzn1.echo-api.request.1c0842a8-c323-49ce-afec-34ebe453bdc2",
+    "timestamp": "2019-05-14T02:08:33Z",
     "locale": "en-US",
-    "intent": {
-      "name": "TransportIntent",
-      "confirmationStatus": "NONE",
-      "slots": {
-        "destination": {
-          "name": "destination",
-          "value": "Sydney",
-          "resolutions": {
-            "resolutionsPerAuthority": [
-              {
-                "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.a986ef81-7ae2-41ed-8449-4497bd80ae6d.AMAZON.AT_CITY",
-                "status": {
-                  "code": "ER_SUCCESS_NO_MATCH"
-                }
-              }
-            ]
-          },
-          "confirmationStatus": "NONE",
-          "source": "USER"
-        },
-        "time": {
-          "name": "time",
-          "value": "19:00",
-          "confirmationStatus": "NONE",
-          "source": "USER"
-        }
-      }
-    },
-    "dialogState": "COMPLETED"
+    "reason": "ERROR",
+    "error": {
+      "type": "INVALID_RESPONSE",
+      "message": "An exception occurred while dispatching the request to the skill."
+    }
   }
 }
