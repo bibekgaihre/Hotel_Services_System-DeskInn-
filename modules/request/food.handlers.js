@@ -1,4 +1,4 @@
-const RequestController = require("../../../modules/request/request.controller");
+const RequestController = require("./request.controller");
 const config = require("config");
 
 const FoodOrderHandler = {

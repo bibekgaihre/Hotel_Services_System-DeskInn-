@@ -3,13 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon ./bin/www"
+    "start": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "test": "mocha  --recursive --exit"
   },
   "dependencies": {
     "ask-sdk": "^2.5.1",
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
     "config": "^3.0.1",
     "cookie-parser": "~1.4.3",
     "cross-env": "^5.2.0",
@@ -18,10 +20,12 @@
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.1.4",
     "moment": "^2.24.0",
     "mongoose": "^5.4.9",
     "morgan": "~1.9.0",
     "nodemailer": "^6.1.1",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "supertest": "^4.0.2"
   }
 }
