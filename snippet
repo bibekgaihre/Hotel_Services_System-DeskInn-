@@ -1,0 +1,40 @@
+ async listByReactiveblood({ limit, start }) {
+    let page = parseInt(start) / parseInt(limit) + 1;
+    let total = await BloodModel.countDocuments({ status: "reactive" });
+    let data = await BloodModel.aggregate([
+      {
+        $match: { status: "reactive" }
+      },
+      {
+        $lookup: {
+          from: "donors",
+          foreignField: "_id",
+          localField: "donor",
+          as: "donor"
+        }
+      },
+      {
+        $unwind: "$donor"
+      },
+
+      {
+        $project: {
+          _id: 1,
+          bag_no: 1,
+          tube_id: 1,
+          "donor.blood_group": 1,
+          "donor.name": 1
+        }
+      },
+      {
+        $sort: { created_at: -1 }
+      }
+    ]);
+    return {
+      total,
+      limit,
+      start,
+      page,
+      data
+    };
+  }
